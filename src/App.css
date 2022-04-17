@@ -39,7 +39,6 @@
   padding: 8px;
   border: 0;
   border-radius: 5px;
-  margin-left: 80px;  
 }
 
 .container {
@@ -50,5 +49,5 @@
 }
 
 .input {
-  width: 70%
+  width: 70%;
 }

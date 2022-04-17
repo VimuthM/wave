@@ -77,6 +77,8 @@ const App = () => {
 			let count = await wavePortalContract.getTotalWaves();
 			console.log('Retrieved total wave count...', count.toNumber());
 			setTotalWaves(count.toNumber());
+
+      await getAllWaves();
 		} catch (error) {
 			console.log(error);
 		}
@@ -210,7 +212,7 @@ const App = () => {
 					</button>
 				)}
 
-        {allWaves.map((wave, index) => {
+        {allWaves.slice(0).reverse().map((wave, index) => {
           return (
             <div key={index} style={{ backgroundColor: "OldLace", marginTop: "16px", padding: "8px" }}>
               <div>Address: {wave.address}</div>
